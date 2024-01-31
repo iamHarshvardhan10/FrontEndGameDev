@@ -5,3 +5,84 @@ body{
   background-color: #293445;
 }
 
+.parllaxImg{
+  width: 100%;
+  height: auto;
+  background-image:url('./assests/asset\ 9.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.navbarContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 8rem;
+
+  ul{
+    display: flex;
+    align-items: center;
+    gap:  2rem;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffff;
+  }
+  ul li:hover{
+    cursor: pointer;
+    color: #fd307a;
+  }
+  
+}
+
+
+.home_container{
+  padding: 2rem 8rem;
+  margin-top: 100px;
+  font-family:'Zen Dots',sans-serif;
+
+  .home_info_container{
+    width: 50%;
+    
+    span{
+      color: white;
+      font-size: 20px;
+      text-transform: uppercase;
+
+    }
+    h1{
+      font-size: 100px;
+      color: white;
+    }
+  }
+  .home_box_container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .box{
+      height: 225px;
+      width: 300px;
+      border: 1px solid #fff;
+      display: flex;
+      flex-direction: column;
+
+      
+
+      span{
+        margin:30px;
+        color: #fd307a;
+
+      }
+      h3{
+        margin: 0px 30px;
+        font-size: 28px;
+        color: #fff;
+        
+
+      }
+    }
+  }
+}

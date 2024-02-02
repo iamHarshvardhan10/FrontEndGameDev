@@ -1,88 +1,896 @@
-body{
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: #293445;
+  overflow-x: hidden;
 }
 
-.parllaxImg{
-  width: 100%;
-  height: auto;
-  background-image:url('./assests/asset\ 9.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 
-}
+  .parllaxImg {
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("./assests/asset\ 9.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
 
-.navbarContainer{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem 8rem;
+  // NAV CONTAINER
 
-  ul{
+  .navbarContainer {
     display: flex;
     align-items: center;
-    gap:  2rem;
-    list-style: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #ffff;
-  }
-  ul li:hover{
-    cursor: pointer;
-    color: #fd307a;
-  }
-  
-}
+    justify-content: space-between;
+    padding: 2rem 8rem;
 
-
-.home_container{
-  padding: 2rem 8rem;
-  margin-top: 100px;
-  font-family:'Zen Dots',sans-serif;
-
-  .home_info_container{
-    width: 50%;
-    
-    span{
-      color: white;
-      font-size: 20px;
-      text-transform: uppercase;
-
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #ffff;
     }
-    h1{
-      font-size: 100px;
-      color: white;
+    ul li:last-child {
+      display: none;
+    }
+    ul li:hover {
+      cursor: pointer;
+      color: #fd307a;
+    }
+
+    .icons {
+      span {
+        display: none;
+      }
     }
   }
-  .home_box_container{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    .box{
-      height: 225px;
-      width: 300px;
-      border: 1px solid #fff;
+
+  // HOME CONTAINER
+
+  .home_container {
+    padding: 2rem 8rem;
+    font-family: "Zen Dots", sans-serif;
+
+    .home_info_container {
+      width: 50%;
+
+      span {
+        color: white;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+      h1 {
+        font-size: 100px;
+        color: white;
+      }
+    }
+    .home_box_container {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      .box {
+        height: 250px;
+        width: 312px;
+        border: 1px solid #fff;
+        display: flex;
+        flex-direction: column;
+
+        span {
+          margin: 30px;
+          color: #fd307a;
+        }
+        h3 {
+          margin: 0px 30px;
+          font-size: 28px;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  // ABOUT CONTAINER
+
+  .about_container {
+    height: auto;
+    background-image: linear-gradient(
+        rgba(80, 66, 159, 0.4),
+        rgba(91, 83, 183, 0.8)
+      ),
+      url("./assests/asset\ 10.jpeg");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 3rem;
+      padding: 0 8rem;
+      .left_about_section {
+        padding: 6rem 0rem;
+        width: 50%;
+        font-family: "Zen Dots", sans-serif;
+        span {
+          color: #9e0678;
+          font-size: 24px;
+          text-transform: uppercase;
+        }
+        h1 {
+          font-size: 55px;
+          color: white;
+        }
+        p {
+          margin-top: 60px;
+          font-size: 1rem;
+          color: grey;
+        }
+        button {
+          font-family: "Zen Dots", sans-serif;
+          margin-top: 30px;
+          padding: 1rem 3rem;
+          color: white;
+          background-color: transparent;
+          outline: none;
+          border: 1px solid white;
+          text-transform: uppercase;
+        }
+        button:hover {
+          background-color: #fd307a;
+          border: 1px solid #fd307a;
+          cursor: pointer;
+        }
+      }
+    }
+    .platform_container {
+      font-family: "Zen Dots", sans-serif;
+      padding: 8rem 18rem;
+
+      span {
+        font-size: 20px;
+        text-transform: uppercase;
+        color: white;
+      }
+      h1 {
+        font-size: 55px;
+        color: white;
+      }
+
+      .acordion {
+        margin-top: 100px;
+
+        .accordion_container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+
+          h1 {
+            font-size: 32px;
+            cursor: pointer;
+          }
+          span {
+            color: rgb(42, 1, 61);
+            transform: rotate(180deg);
+            cursor: pointer;
+          }
+        }
+        p {
+          color: grey;
+          width: 90%;
+        }
+      }
+    }
+  }
+
+  .projectContainer {
+    border-top: 1px solid grey;
+    font-family: "Zen Dots", sans-serif;
+    .projectHead {
+      padding: 0 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h2 {
+        font-size: 55px;
+        color: white;
+      }
+      .iconTab {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        cursor: pointer;
+
+        span {
+          color: #fd307a;
+        }
+        .icon {
+          color: #fd307a;
+        }
+      }
+    }
+
+    .projectImages {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .imageBox1 {
+        width: 378px;
+        height: 495px;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.8)
+          ),
+          url("./assests/asset\ 13.jpeg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        .boxContent {
+          padding: 12rem 2rem;
+          span {
+            font-size: 24px;
+            color: #fd307a;
+          }
+          h1 {
+            color: white;
+          }
+          p {
+            color: white;
+          }
+        }
+      }
+
+      .imageBox2 {
+        width: 378px;
+        height: 495px;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.8)
+          ),
+          url("./assests/asset\ 14.jpeg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        .boxContent {
+          padding: 12rem 2rem;
+          span {
+            font-size: 24px;
+            color: #fd307a;
+          }
+          h1 {
+            color: white;
+          }
+          p {
+            color: white;
+          }
+        }
+      }
+      .imageBox3 {
+        width: 378px;
+        height: 495px;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.8)
+          ),
+          url("./assests/asset\ 15.jpeg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        .boxContent {
+          padding: 12rem 2rem;
+          span {
+            font-size: 24px;
+            color: #fd307a;
+          }
+          h1 {
+            color: white;
+          }
+          p {
+            color: white;
+          }
+        }
+      }
+      .imageBox4 {
+        width: 378px;
+        height: 495px;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.8)
+          ),
+          url("./assests/asset\ 16.jpeg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        .boxContent {
+          padding: 12rem 2rem;
+          span {
+            font-size: 24px;
+            color: #fd307a;
+          }
+          h1 {
+            color: white;
+          }
+          p {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .chooseContainer {
+    font-family: "Zen Dots", sans-serif;
+    padding: 8rem 18rem;
+
+    .chooseHead {
+      span {
+        color: white;
+        font-size: 24px;
+      }
+      h1 {
+        color: white;
+        font-size: 55px;
+      }
+    }
+
+    .chooseBoxes {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+
+      .chooseBox {
+        h3 {
+          font-size: 24px;
+          color: white;
+        }
+        span {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .connectContainer {
+    font-family: "Zen Dots", sans-serif;
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+      url("./assests/asset\ 17.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .connectInfo {
+      width: 100%;
+      height: 100vh;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
-      
-
-      span{
-        margin:30px;
-        color: #fd307a;
-
+      h1 {
+        width: 40%;
+        font-size: 55px;
+        color: white;
       }
-      h3{
-        margin: 0px 30px;
-        font-size: 28px;
-        color: #fff;
-        
+      span {
+        width: 50%;
+        margin-top: 30px;
+        font-size: 18px;
+        color: white;
+      }
 
+      button {
+        font-family: "Zen Dots", sans-serif;
+        margin-top: 50px;
+        padding: 1rem 3rem;
+        background-color: transparent;
+        font-size: 16px;
+        color: white;
+        border: 1px solid white;
+      }
+      button:hover {
+        background-color: #fd307a;
+        cursor: pointer;
+        border: 1px solid #fd307a;
       }
     }
   }
+
+  .footercontainer {
+    font-family: "Zen Dots", sans-serif;
+    padding: 4rem 6rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .rightContainer {
+      flex-basis: 33%;
+      line-height: 24px;
+      font-weight: 500;
+      color: grey;
+    }
+
+    .middleContainer {
+      flex-basis: 20%;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: space-between;
+
+      h2 {
+        color: white;
+        font-size: 24px;
+      }
+      span {
+        color: white;
+        margin: 5px 0;
+      }
+      span:hover {
+        color: #fd307a;
+        cursor: pointer;
+      }
+    }
+
+    .leftContainer {
+      flex-basis: 33%;
+
+      h2 {
+        color: white;
+      }
+      p {
+        width: 80%;
+        color: white;
+      }
+      p:hover {
+        color: #fd307a;
+        cursor: pointer;
+      }
+    }
+  }
+
+// media queries
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .parllaxImg {
+    width: 100%;
+  }
+  .navbarContainer {
+    padding: 2rem 1rem;
+    ul li:nth-child(1) {
+      display: none;
+    }
+    ul li:nth-child(2) {
+      display: none;
+    }
+    ul li:nth-child(3) {
+      display: none;
+    }
+    ul li:nth-child(4) {
+      display: none;
+    }
+    ul li:last-child {
+      display: flex;
+    }
+  }
+
+  .home_container {
+    padding: 2rem 1rem;
+    font-family: "Zen Dots", sans-serif;
+
+    .home_info_container {
+      width: 100%;
+
+      span {
+        font-size: 16px;
+      }
+      h1 {
+        font-size: 32px;
+        color: white;
+      }
+    }
+    .home_box_container {
+      .box {
+        height: 180px;
+        width: 100%;
+      }
+    }
+  }
+
+  .about_container {
+    height: auto;
+    background-position: right;
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: 0 1rem;
+      .left_about_section {
+        width: 100%;
+        h1 {
+          font-size: 40px;
+          color: white;
+        }
+      }
+      .right_about_section {
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .platform_container {
+      width: 100%;
+      padding: 2rem 1rem;
+      span {
+        font-size: 20px;
+      }
+      h1 {
+        font-size: 32px;
+        color: white;
+      }
+      .acordion {
+        margin-top: 50px;
+        width: 90%;
+      }
+    }
+  }
+
+  .projectContainer {
+    border-top: none;
+    .projectHead {
+      width: 100%;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      h2 {
+        font-size: 28px;
+        color: white;
+      }
+    }
+    .projectImages {
+      display: flex;
+      .imageBox1 {
+        width: 100%;
+      }
+
+      .imageBox2 {
+        width: 100%;
+      }
+      .imageBox3 {
+        width: 100%;
+      }
+      .imageBox4 {
+        width: 100%;
+      }
+    }
+  }
+
+  .chooseContainer {
+    padding: 2rem;
+    .chooseHead {
+      h1 {
+        color: white;
+        font-size: 32px;
+      }
+    }
+    .chooseBoxes {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .connectContainer {
+    width: 100%;
+    .connectInfo {
+      padding: 0rem 1rem;
+      h1 {
+        width: 100%;
+        font-size: 28px;
+        color: white;
+      }
+      span {
+        width: 90%;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .footercontainer {
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .parllaxImg {
+    width: 100%;
+  }
+  .navbarContainer {
+    padding: 2rem 1rem;
+    ul li:nth-child(1) {
+      display: none;
+    }
+    ul li:nth-child(2) {
+      display: none;
+    }
+    ul li:nth-child(3) {
+      display: none;
+    }
+    ul li:nth-child(4) {
+      display: none;
+    }
+    ul li:last-child {
+      display: flex;
+    }
+  }
+  .home_container {
+    padding: 2rem 1rem;
+    .home_info_container {
+      width: 100%;
+      h1 {
+        font-size: 55px;
+        color: white;
+      }
+    }
+  }
+
+  .about_container {
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 3rem;
+      padding: 0 2rem;
+      .left_about_section {
+        padding: 2rem 0rem;
+        width: 100%;
+      }
+      .right_about_section {
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .platform_container {
+      width: 90%;
+      padding: 2rem 1rem;
+      span {
+        font-size: 20px;
+      }
+      h1 {
+        font-size: 32px;
+        color: white;
+      }
+      .acordion {
+        margin-top: 50px;
+        width: 90%;
+      }
+    }
+  }
+  .projectContainer {
+    border-top: none;
+    .projectHead {
+      padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      h2 {
+        font-size: 42px;
+      }
+    }
+
+    .projectImages {
+      display: flex;
+      margin-top: 30px;
+
+      .imageBox1 {
+        width: 100%;
+        height: 100%;
+      }
+      .imageBox2 {
+        width: 100%;
+        height: 100%;
+        background-position: top;
+      }
+      .imageBox3 {
+        width: 100%;
+        height: 100%;
+        background-position: top;
+      }
+      .imageBox4 {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .chooseContainer {
+    padding: 2rem 4rem;
+
+    .chooseBoxes {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .connectContainer {
+    .connectInfo {
+      width: 75%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 0rem 4rem;
+
+      h1 {
+        width: 100%;
+        font-size: 32px;
+        color: white;
+      }
+      span {
+        width: 100%;
+      }
+    }
+  }
+
+  .footercontainer {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1124px) {
+  .parllaxImg {
+    width: 100%;
+  }
+
+  .navbarContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 3rem;
+  }
+
+  // HOME CONTAINER
+
+  .home_container {
+    padding: 1rem 3rem;
+
+    .home_info_container {
+      width: 100%;
+      span {
+        color: white;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+      h1 {
+        font-size: 55px;
+        color: white;
+      }
+    }
+    .home_box_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+      .box {
+        height: 125px;
+        width: 100%;
+        border: 1px solid #fff;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+  }
+
+  // ABOUT CONTAINER
+
+  .about_container {
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: 0 2rem;
+      .left_about_section {
+        padding: 6rem 0rem;
+        width: 100%;
+      }
+      .right_about_section {
+        img {
+          width: 100%;
+          height: 100vh;
+          object-fit: cover;
+        }
+      }
+    }
+    .platform_container {
+      padding: 2rem;
+
+      h1 {
+        font-size: 48px;
+        color: white;
+      }
+    }
+  }
+
+  .projectContainer {
+    border-top: none;
+    .projectHead {
+      padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .projectImages {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+
+      .imageBox1 {
+        width: 100%;
+        height: 100vh;
+        background-position: right;
+      }
+      .imageBox2 {
+        width: 100%;
+        height: 100vh;
+        background-position: top;
+      }
+      .imageBox3 {
+        width: 100%;
+        height: 100vh;
+        background-position: top;
+      }
+      .imageBox4 {
+        width: 100%;
+        height: 100vh;
+      }
+    }
+  }
+
+  .chooseContainer {
+    padding: 4rem 2rem;
+
+    .chooseBoxes {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .connectContainer {
+    .connectInfo {
+      h1 {
+        width: 60%;
+        font-size: 55px;
+        color: white;
+      }
+      span {
+        width: 60%;
+        margin-top: 30px;
+        font-size: 18px;
+        color: white;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
 }

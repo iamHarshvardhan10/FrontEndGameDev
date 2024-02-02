@@ -1,5 +1,7 @@
 import logo from "../assests/asset 0.png";
+import About from "./About";
 import Home from "./Home";
+import { FaBars } from "react-icons/fa";
 
 const Navbar = () => {
   return (
@@ -11,11 +13,17 @@ const Navbar = () => {
           <li>Projects</li>
           <li>About</li>
           <li>Contact</li>
+          <li> <FaBars /></li>
         </ul>
+        {/* <div className="icons">
+          <span>
+            <FaBars />
+          </span>
+        </div> */}
       </div>
-      <div>
-        <Home />
-      </div>
+
+      <Home />
+      <About />
     </>
   );
 };

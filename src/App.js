@@ -1,5 +1,7 @@
 import React from 'react'
 import Navbar from './components/Navbar';
+import { Footer } from './components/Footer';
+// import Projects from './components/Projects';
 // import home from './assests/asset 10.jpeg'
 const App = () => {
   return (
@@ -9,6 +11,8 @@ const App = () => {
           <Navbar />
         </div>
       </div>
+      
+      <Footer/>
     </>
 
 

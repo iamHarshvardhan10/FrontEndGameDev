@@ -1,3 +1,5 @@
+
+
 const Home = () => {
   return (
     <div className="home_container">
@@ -7,20 +9,20 @@ const Home = () => {
       </div>
       <div className="home_box_container">
         <div className="box">
-            <span>_01</span>
-            <h3>Full Cycle Game Developement</h3>
+          <span>_01</span>
+          <h3>Full Cycle Game Developement</h3>
         </div>
         <div className="box">
-            <span>_02</span>
-            <h3>Nft Game Development</h3>
+          <span>_02</span>
+          <h3>Nft Game Development</h3>
         </div>
         <div className="box">
-            <span>_03</span>
-            <h3>Game Testing & Porting</h3>
+          <span>_03</span>
+          <h3>Game Testing & Porting</h3>
         </div>
         <div className="box">
-            <span>_04</span>
-            <h3>Gamification Services</h3>
+          <span>_04</span>
+          <h3>Gamification Services</h3>
         </div>
       </div>
     </div>
